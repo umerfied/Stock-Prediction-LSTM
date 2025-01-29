@@ -20,16 +20,17 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 - Making both direct and recursive predictions
 - Visualizing results
 
-## Project Structure Stock Prediction using LSTM/
-├── main.py # Main execution script
-├── config.py # Configuration parameters
-├── data_loader.py # Stock data downloading functions
-├── data_processing.py # Data preprocessing utilities
-├── model.py # LSTM model definition
-├── visualization.py # Plotting functions
-├── requirements.txt # Project dependencies
-└── README.md # Project documentation
-```
+## Project Structure Stock Prediction using LSTM
+- main.py # Main execution script
+- config.py # Configuration parameters
+- data_loader.py # Stock data downloading functions
+- data_processing.py # Data preprocessing utilities
+- model.py # LSTM model definition
+- tuning.py # Optuner
+- visualization.py # Plotting functions
+- requirements.txt # Project dependencies
+- README.md # Project documentation
+
 
 ## Installation
 
@@ -40,7 +41,7 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/umerfied/Stock_Prediction_using_LSTM
+git clone (https://github.com/umerfied/Stock-Prediction-LSTM.git)
 cd Stock-Prediction-LSTM
 ```
 
@@ -62,14 +63,14 @@ Required packages:
 ## Configuration
 The `config.py` file contains all configurable parameters:
 
-| Parameter | Description | Example Value |
-|-----------|-------------|---------------|
-| TICKER | Stock symbol | 'AAPL' |
-| TIME_PERIOD | Historical data period | '2y' |
-| TIME_INTERVAL | Data frequency | '1d' |
-| WINDOW_SIZE | Time steps for LSTM | 60 |
-| TRAIN_SPLIT | Training data proportion | 0.7 |
-| VAL_SPLIT | Validation data proportion | 0.15 |
+| Parameter     | Description                | Example Value |
+| ------------- | -------------------------- | ------------- |
+| TICKER        | Stock symbol               | 'AAPL'        |
+| TIME_PERIOD   | Historical data period     | '2y'          |
+| TIME_INTERVAL | Data frequency             | '1d'          |
+| WINDOW_SIZE   | Time steps for LSTM        | 60            |
+| TRAIN_SPLIT   | Training data proportion   | 0.7           |
+| VAL_SPLIT     | Validation data proportion | 0.15          |
 
 ## Module Details
 
