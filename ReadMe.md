@@ -20,7 +20,7 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 - Making both direct and recursive predictions
 - Visualizing results
 
-## Project Structure Stock Prediction using LSTM
+## Project Structure
 - main.py # Main execution script
 - config.py # Configuration parameters
 - data_loader.py # Stock data downloading functions
