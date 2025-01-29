@@ -3,6 +3,7 @@ from data_loader import download_stock_data, str_to_datetime
 from data_processing import df_to_windowed_df, windowed_as_np, prepare_data_splits
 from model import create_lstm_model, make_recursive_predictions
 from visualization import *
+from tuning import *
 
 def main():
     # Download and prepare data

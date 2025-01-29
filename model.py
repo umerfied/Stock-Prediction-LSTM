@@ -20,7 +20,25 @@ def create_lstm_model():
     )
     
     return model
-
+def Optuned_model():
+    study = optuna.create_study(direction='minimized')
+    study.optimize(objective, n_trials = 100)
+    best_params = study.best_params
+    best_model = Sequential([
+        LSTM(best_params['n_units'], activation = 'Relu', input_shape(X_train.shape[1], X_train.shape[2])),
+        Dropout(best_params['n_dropout']),
+        Dense(1)
+    ])
+    best_model.compile(
+        loss='mae',
+        optimizers = keras.optimizers.Adam(learning_rate = best_params['lr']),
+        metrics = ['mean_absolute_error']
+    )
+    best_model.fit(X_train,Y_train,epochs = 50, verbose = 0, batch_size =32)
+    best_model.predict(X_val)
+    mae = mean_absolute_error(y_val, y_pred)
+    print('Validation MAE:',mae)
+    
 def make_recursive_predictions(model, X_train, dates_val, dates_test, noise_level=0.1):
     """Make recursive predictions"""
     from copy import deepcopy

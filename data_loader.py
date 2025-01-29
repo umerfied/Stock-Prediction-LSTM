@@ -18,7 +18,6 @@ def download_stock_data(ticker, period, interval):
     return df
 
 def str_to_datetime(s):
-    """Convert string to datetime object"""
     split = s.split('-')
     year, month, day = int(split[0]), int(split[1]), int(split[2])
     return datetime(year=year, month=month, day=day) 

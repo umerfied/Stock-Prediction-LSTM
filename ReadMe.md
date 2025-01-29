@@ -40,7 +40,7 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 ### Setup
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/umerfied/Stock_Prediction_using_LSTM
 cd Stock-Prediction-LSTM
 ```
 
@@ -50,6 +50,7 @@ pip install -r requirements.txt
 ```
 
 Required packages:
+- optuna >= 4.2.0
 - tensorflow >= 2.0.0
 - pandas >= 1.0.0
 - numpy >= 1.18.0
