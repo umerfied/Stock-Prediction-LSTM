@@ -41,7 +41,7 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 ### Setup
 1. Clone the repository:
 ```bash
-git clone (https://github.com/umerfied/Stock-Prediction-LSTM.git)
+git clone https://github.com/umerfied/Stock-Prediction-LSTM.git
 cd Stock-Prediction-LSTM
 ```
 
@@ -100,6 +100,10 @@ Defines the LSTM model architecture:
 - Configures model parameters
 - Implements prediction functions
 - Handles recursive predictions
+### tuner.py
+Defines a tuner for the best parameters.
+- Optuna that tunes the model
+- A tuner that selects the model into the best of the hyperparamters.  
 
 ### visualization.py
 Provides visualization functions:
