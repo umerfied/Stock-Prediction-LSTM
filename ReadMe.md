@@ -20,17 +20,38 @@ This project implements a Long Short-Term Memory (LSTM) neural network to predic
 - Making both direct and recursive predictions
 - Visualizing results
 
-## Project Structure
-- main.py # Main execution script
-- config.py # Configuration parameters
-- data_loader.py # Stock data downloading functions
-- data_processing.py # Data preprocessing utilities
-- model.py # LSTM model definition
-- tuning.py # Optuner
-- visualization.py # Plotting functions
-- requirements.txt # Project dependencies
-- README.md # Project documentation
+## Project Structure 📂
 
+```text
+stock-prediction-lstm/
+├── 📁 core_modules/
+│   ├── 📄 main.py              # Main pipeline orchestration
+│   ├── 📄 data_loader.py       # Data acquisition from Yahoo Finance
+│   ├── 📄 data_processing.py   # Feature engineering & preprocessing
+│   └── 📄 model.py             # LSTM architecture definition
+├── 📁 utilities/
+│   ├── 📄 visualization.py     # Interactive plot generation
+│   └── 📄 tuning.py            # Hyperparameter optimization
+├── 📄 config.py                # 🛠️ Global parameters & settings
+├── 📄 requirements.txt         # 📦 Dependency specifications
+└── 📄 README.md                # 📖 Documentation (you are here)
+```
+
+### Key Components 🗝️
+**Core Modules**
+- `main.py`: Execution pipeline controller
+- `data_*.py`: Data lifecycle management
+- `model.py`: Neural network architecture
+
+**Support Modules**
+- `visualization.py`: Matplotlib/Seaborn plotting
+- `tuning.py`: Optuna integration for parameter search
+
+**Configuration**
+- `config.py`: Central parameter management
+- `requirements.txt`: Package dependencies
+
+*Note: Structure shown is simplified - run `tree` for complete hierarchy*
 
 ## Installation
 
@@ -58,7 +79,6 @@ Required packages:
 - yfinance >= 0.1.63
 - scikit-learn >= 0.24.0
 - matplotlib >= 3.3.0
-- datetime
 
 ## Configuration
 The `config.py` file contains all configurable parameters:
@@ -100,10 +120,12 @@ Defines the LSTM model architecture:
 - Configures model parameters
 - Implements prediction functions
 - Handles recursive predictions
-### tuner.py
-Defines a tuner for the best parameters.
-- Optuna that tunes the model
-- A tuner that selects the model into the best of the hyperparamters.  
+### tuning.py
+Implements hyperparameter optimization:
+- Uses Optuna framework
+- Automates hyperparameter search
+- Optimizes LSTM architecture parameters
+- Selects best performing configuration 
 
 ### visualization.py
 Provides visualization functions:
@@ -140,21 +162,19 @@ python main.py
 - Validation: Using validation split
 
 ## Output
-
 ### Generated Visualizations
-1. Historical Stock Data
-   - Raw price data
-   - Trading volume
+1. 📈 Historical Stock Data
+   - Raw price data with moving averages
+   - Volume-Weighted Average Price (VWAP)
 
-2. Data Split Visualization
-   - Training set
-   - Validation set
-   - Test set
+2. 🧩 Data Split Visualization
+   - Interactive timeline of train/val/test splits
+   - Distribution comparisons between sets
 
-3. Predictions
-   - Direct predictions vs actual values
-   - Recursive predictions
-   - Scaled and unscaled versions
+3. 🔮 Predictions
+   - Direct vs. recursive prediction comparisons
+   - Confidence intervals for forecasts
+   - Zoomable comparison plots
 
 ### Prediction Types
 1. Direct Predictions
@@ -198,3 +218,4 @@ This project is licensed under the MIT License.
 
 ## Contributing
 Contributions are welcome! Please feel free to submit pull requests.
+[![Open in GitHub](https://img.shields.io/badge/Open%20in-GitHub-black?logo=github)](https://github.com/umerfied/Stock-Prediction-LSTM)   ![Python Version](https://img.shields.io/badge/Python-3.7%2B-blue) ![License](https://img.shields.io/badge/License-MIT-green)

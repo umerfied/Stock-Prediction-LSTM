@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from sklearn.preprocessing import MinMaxScaler
+from core_modules.data_loader import str_to_datetime
 
 def df_to_windowed_df(dataframe, first_date_str, last_date_str, n=3):
     

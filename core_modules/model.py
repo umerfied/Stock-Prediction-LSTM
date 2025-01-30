@@ -1,6 +1,7 @@
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Input
+from core_modules.config import WINDOW_SIZE
 
 def create_lstm_model():
     """Create and return the LSTM model"""

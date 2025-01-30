@@ -3,6 +3,9 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from data_processing import *
+from core_modules.model import create_lstm_model
+from core_modules.config import *
+
 def objective(trials):
     n_dropout = trials.suggest_float('n_dropout', 0.1, 0.5, log = True)
     lr = trials.suggest_float('lr', 1e-5,1e-1)

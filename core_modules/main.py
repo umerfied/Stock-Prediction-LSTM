@@ -1,9 +1,9 @@
-from config import *
-from data_loader import download_stock_data, str_to_datetime
-from data_processing import df_to_windowed_df, windowed_as_np, prepare_data_splits
-from model import create_lstm_model, make_recursive_predictions
-from visualization import *
-from tuning import *
+from core_modules.config import *
+from core_modules.data_loader import download_stock_data, str_to_datetime
+from core_modules.data_processing import df_to_windowed_df, windowed_as_np, prepare_data_splits
+from core_modules.model import create_lstm_model, make_recursive_predictions
+from utilities.visualization import *
+from utilities.tuning import *
 
 def main():
     # Download and prepare data
